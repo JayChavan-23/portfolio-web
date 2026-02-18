@@ -1,0 +1,276 @@
+@import "tailwindcss";
+
+/* Class-based dark mode (add .dark to html) */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Light theme default */
+html {
+  background-color: #fafafa;
+  color: #1d1d1f;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  scroll-behavior: smooth;
+}
+
+html.dark {
+  background-color: #0a0a0a;
+  color: #fafafa;
+}
+
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Smooth transitions for theme-aware elements - exclude transform/opacity for perf */
+html,
+body,
+nav,
+button,
+a {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease,
+    opacity 0.3s ease;
+}
+
+/* Quantico font utilities */
+.quantico-regular {
+  font-family: "Quantico", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.quantico-bold {
+  font-family: "Quantico", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.quantico-regular-italic {
+  font-family: "Quantico", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.quantico-bold-italic {
+  font-family: "Quantico", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* Smooth page animations */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.6s ease-out forwards;
+}
+
+.animation-delay-150 {
+  animation-delay: 150ms;
+}
+.animation-delay-300 {
+  animation-delay: 300ms;
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 8s linear infinite;
+}
+
+@keyframes arrow-bounce {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(4px);
+  }
+}
+
+.animate-arrow-bounce {
+  animation: arrow-bounce 1.2s ease-in-out infinite;
+}
+
+/* Hero page load fade-in */
+@keyframes hero-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.hero-reveal {
+  animation: hero-fade-in 0.5s ease-out forwards;
+}
+
+.hero-reveal-delay-1 {
+  animation: hero-fade-in 0.5s ease-out 0.1s forwards;
+  opacity: 0;
+}
+
+.hero-reveal-delay-2 {
+  animation: hero-fade-in 0.5s ease-out 0.2s forwards;
+  opacity: 0;
+}
+
+/* Scroll down hint - controlled by inline opacity from scroll, no animation conflict */
+.scroll-down-hint {
+  transition: opacity 0.15s ease-out;
+}
+
+/* Subtle grid background - fades towards edges */
+.bg-grid {
+  position: relative;
+}
+
+.bg-grid::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(to right, rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(
+    ellipse 80% 80% at 50% 50%,
+    black 20%,
+    transparent 70%
+  );
+  -webkit-mask-image: radial-gradient(
+    ellipse 80% 80% at 50% 50%,
+    black 20%,
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+.dark .bg-grid::before {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+}
+
+/* Cursor glow trail */
+.cursor-glow {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  margin-left: -50px;
+  margin-top: -50px;
+  border-radius: 50%;
+  filter: blur(8px);
+  animation: glow-fade 450ms ease-out forwards;
+  pointer-events: none;
+}
+
+/* Solid sections - block grid visibility */
+.section-solid {
+  position: relative;
+  z-index: 1;
+  background-color: #ffffff;
+}
+
+.dark .section-solid {
+  background-color: #0a0a0a;
+}
+
+#education.section-solid {
+  background-color: #e8e8e8;
+}
+
+.dark #education.section-solid {
+  background-color: #171717;
+}
+
+.card-solid {
+  background-color: #ffffff !important;
+  opacity: 1;
+}
+
+.dark .card-solid {
+  background-color: #171717 !important;
+  opacity: 1;
+}
+
+@keyframes glow-fade {
+  0% {
+    opacity: 1;
+    transform: scale(0.6);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.2);
+  }
+}
+
+/* Nav & footer link underline on hover */
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: currentColor;
+  transition: width 0.25s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Project card hover polish */
+.project-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.1), 0 4px 8px -4px rgba(0, 0, 0, 0.05);
+}
+
+.dark .project-card:hover {
+  box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.4), 0 4px 8px -4px rgba(0, 0, 0, 0.2);
+}
+
+.project-card .card-image {
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover .card-image {
+  transform: scale(1.03);
+}
+
+/* Education item hover */
+.education-item:hover .education-node {
+  transform: scale(1.2);
+  opacity: 1;
+}
+
+.education-node {
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+/* Button hover scale */
+.btn-cta {
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.btn-cta:hover {
+  transform: scale(1.03);
+}
