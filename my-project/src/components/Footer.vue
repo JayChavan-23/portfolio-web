@@ -21,7 +21,7 @@ const footerLinks = [
             </p>
           </div>
           <a
-            href="mailto:hello@jaychavan.com"
+            href="mailto:jaychavan.work@gmail.com"
             class="btn-cta quantico-bold text-sm px-6 py-3 rounded-full bg-white text-neutral-900 dark:bg-neutral-700 dark:text-neutral-100 hover:opacity-90 transition-all duration-200 shrink-0 border border-neutral-300 dark:border-neutral-600 shadow-sm"
           >
             Contact me
@@ -40,7 +40,7 @@ const footerLinks = [
             </a>
             <div class="flex gap-4">
               <a
-                href="https://linkedin.com/in/jaychavan"
+                href="https://www.linkedin.com/in/jaychavansde/"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="opacity-75 hover:opacity-100 transition-opacity"
@@ -49,7 +49,7 @@ const footerLinks = [
                 <i class="fa-brands fa-linkedin text-xl"></i>
               </a>
               <a
-                href="https://github.com/jaychavan"
+                href="https://github.com/JayChavan-23"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="opacity-75 hover:opacity-100 transition-opacity"

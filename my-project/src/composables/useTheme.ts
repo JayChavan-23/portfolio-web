@@ -1,10 +1,9 @@
 import { ref, watch } from 'vue'
 
 function getInitialTheme() {
+  // Always start in light mode on initial load
   if (typeof window === 'undefined') return false
-  const stored = localStorage.getItem('theme')
-  if (stored === 'dark' || stored === 'light') return stored === 'dark'
-  return false // Default to light theme
+  return false
 }
 
 export function useTheme() {
