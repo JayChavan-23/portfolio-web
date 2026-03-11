@@ -34,7 +34,7 @@ const projects: Project[] = [
     fullDescription:
       'LiveWell is a web companion for older adults, built with React and Tailwind CSS. It lets users track daily health metrics, view frailty scores, manage medicine and vaccination reminders, interact with an AI health chatbot, and follow goals and achievements. The website shares its backend with the mobile app to keep data consistent across devices.',
     technologies: ['React', 'Vite', 'Tailwind CSS', 'Express.js', 'Firebase Auth', 'Firestore'],
-    image: 'https://private-user-images.githubusercontent.com/78658243/547522715-2fe9e345-5b3f-41f4-a812-da8f3a7c38f2.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzMyMTc0MDcsIm5iZiI6MTc3MzIxNzEwNywicGF0aCI6Ii83ODY1ODI0My81NDc1MjI3MTUtMmZlOWUzNDUtNWIzZi00MWY0LWE4MTItZGE4ZjNhN2MzOGYyLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNjAzMTElMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjYwMzExVDA4MTgyN1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWEwMTI0MWM5MTFkOGU1ZTcyODNlYmM1MDJkYmRmY2RmMmMzN2QzY2MzNGI1ODBhMDFlZmQxZDdjNDY5YmY5ZTMmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.6cdxjXw4yZuyg37IUBJGadmK9pnJgv99ntn5uemGFe0',
+    image: 'https://photos5.appleinsider.com/gallery/63145-131211-52906-105848-health-xl-xl.jpg',
     category: 'web',
     link: 'https://github.com/JayChavan-23/LiveWell',
     github: 'https://github.com/JayChavan-23/LiveWell',
@@ -47,7 +47,7 @@ const projects: Project[] = [
     fullDescription:
       'EventSphere is a full‑stack event discovery platform that lets users search, filter, bookmark, and explore events with rich detail pages. It supports authentication with JWT, profile dashboards, My Events, and an admin panel for managing users and trending events. The system is split into backend, proxy frontend, and MySQL database services for a clean separation of concerns.',
     technologies: ['Node.js', 'Express.js', 'MySQL', 'HTML', 'CSS', 'JavaScript', 'JWT'],
-    image: 'https://github-production-user-asset-6210df.s3.amazonaws.com/142463809/454673444-61195e03-a1a5-4443-ae6c-0c35ed5a8c26.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20260311%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260311T085031Z&X-Amz-Expires=300&X-Amz-Signature=abb73bb9414ba2567bfb45005c38ac164bcc33081b45d65e733f0ee67407e99e&X-Amz-SignedHeaders=host',
+    image: 'https://www.eventbrite.com.au/blog/wp-content/uploads/2022/06/types-of-events-header.jpg',
     category: 'web',
     link: 'https://github.com/JayChavan-23/EventSphere',
     github: 'https://github.com/JayChavan-23/EventSphere',
